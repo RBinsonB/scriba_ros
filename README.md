@@ -3,11 +3,18 @@ Scriba robot base ROS packages:
 
 - **scriba_description** Robot description and URDF files.
 
-- **scriba_msgs** Message repository
+- **scriba_msgs** Message repository.
 
 For more detailed information on the robot, please take a look at [the robot repository](https://github.com/RBinsonB/Scriba_robot). For localization related packages, please take a look at the [scriba_localization package](https://github.com/RBinsonB/scriba_localization)
 
 :bangbang: Code is relatively old and could be cleaned up and improved.
+
+:bangbang: Services don't work on Arduino with the last rosserial_python and rosserial_arduino packages (0.8.0). Building an older version from source is required in order to use services. Older packages are included in the repository and can be built after uninstalling the repo packages.
+
+:bangbang: There is a bug in the lastest ROS versions (Melodic and Lunar) preventing the correct display on robot models in RViz if you have a local setting other than US. A quick fix working for me was to type the following command before launching RViz:
+```
+export LC_NUMERIC="en_US.UTF-8"
+```
 
 # scriba
 
